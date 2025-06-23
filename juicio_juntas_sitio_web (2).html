@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juicio a las Juntas | 40 Años</title>
+  <meta name="description" content="Recursos interactivos y cronología para conmemorar los 40 años del Juicio a las Juntas Militares en Argentina.">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --clr-primary:#0e2342;
+      --clr-secondary:#005cc8;
+      --clr-accent:#e63946;
+      --clr-light:#f9f9f9;
+      --clr-dark:#111;
+      --radius:6px;
+      --max-width:1200px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Roboto',sans-serif;background:var(--clr-light);color:#333;line-height:1.6}
+    h1,h2,h3{font-family:'Merriweather',serif}
+    a{color:var(--clr-secondary);text-decoration:none}
+    a:hover{color:var(--clr-accent)}
+    header{background:var(--clr-primary);color:#fff;text-align:center;padding:4rem 1rem 6rem;position:relative}
+    header::after{content:"";position:absolute;bottom:0;left:0;width:100%;height:40px;background:linear-gradient(180deg,rgba(14,35,66,0)0%,var(--clr-light)100%)}
+    .hero-title{font-size:clamp(2rem,5vw,3rem);margin-bottom:.5rem}
+    nav{background:var(--clr-dark);position:sticky;top:0;z-index:1000}
+    .nav-container{max-width:var(--max-width);margin:auto;display:flex;justify-content:space-between;align-items:center;padding:.5rem 1rem}
+    .nav-links{display:flex;gap:1.2rem}
+    .nav-links a{color:#fff;font-weight:bold}
+    .nav-toggle{display:none;font-size:1.8rem;color:#fff;background:none;border:none;cursor:pointer}
+    section{padding:4rem 1rem;max-width:var(--max-width);margin:auto}
+    .card{background:#fff;padding:1.5rem;border-radius:var(--radius);box-shadow:0 4px 10px rgba(0,0,0,.05)}
+    .grid{display:grid;gap:1.5rem}
+    .grid-2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+    details{border:1px solid #ddd;border-radius:var(--radius);padding:1rem;background:#fff;margin-bottom:1rem}
+    summary{font-weight:600;cursor:pointer}
+    details ul{margin-top:.8rem;margin-left:1rem;list-style:disc}
+    footer{background:var(--clr-dark);color:#ccc;text-align:center;padding:2rem 1rem}
+    @media(max-width:768px){
+      .nav-toggle{display:block}
+      .nav-links{position:absolute;top:100%;left:0;width:100%;background:var(--clr-dark);flex-direction:column;max-height:0;overflow:hidden;transition:max-height .3s ease}
+      .nav-links.open{max-height:400px}
+    }
+    html{scroll-behavior:smooth}
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="hero-title">Juicio a las Juntas</h1>
+    <p>40.º aniversario • Memoria, Verdad y Justicia</p>
+  </header>
+
+  <nav aria-label="Menú principal">
+    <div class="nav-container">
+      <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#contexto">Contexto</a>
+        <a href="#linea-tiempo">Línea del tiempo</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#materiales">Recursos educativos</a>
+        <a href="#recursos">Fuentes externas</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- contexto -->
+    <section id="contexto">
+      <h2>Contexto histórico</h2>
+      <div class="card">
+        <p>El <strong>Juicio a las Juntas</strong> (1985) fue la culminación de un camino iniciado con la restauración democrática del 10 de diciembre de 1983. A lo largo de dos años, el gobierno de Raúl Alfonsín impulsó leyes y decretos que permitieron investigar los crímenes de la dictadura (1976-1983) y llevar a juicio a los comandantes militares.</p>
+      </div>
+    </section>
+
+    <!-- Línea del tiempo TimelineJS -->
+    <section id="linea-tiempo">
+      <h2>Línea del tiempo completa</h2>
+      <div class="card" style="padding:0;overflow:hidden">
+        <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=v2%3A2PACX-1vQbYGut2GSOZ7zrNSlZQfcUruSnnW587TQNz7tMlpC1Qw66j6ogJxw3af8k0C_ycFJZqnNsaXrdIyz0&font=Default&lang=en&initial_zoom=2&width=100%25&height=650' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
+      </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section id="testimonios">
+      <h2>Testimonios</h2>
+      <div class="grid grid-2">
+        <figure class="card"><blockquote>“Señores jueces: ¡Nunca más!”</blockquote><figcaption>Julio C. Strassera, fiscal (1985)</figcaption></figure>
+        <figure class="card"><blockquote>“Declaré para que mi voz representara a quienes ya no estaban.”</blockquote><figcaption>Sobreviviente ex‑detenida</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- Recursos educativos -->
+    <section id="materiales">
+      <h2>Recursos educativos</h2>
+      <div class="grid grid-2">
+        <article class="card"><h3>Sentencia completa (PDF)</h3><p><a href="https://www.cij.gov.ar/nota-12548-Sentencia-del-Juicio-a-las-Juntas.html" target="_blank" rel="noopener">Descargar documento</a></p></article>
+        <article class="card"><h3>Glosario clave</h3><ul><li>CONADEP</li><li>Punto Final</li><li>Obediencia Debida</li></ul></article>
+        <article class="card"><h3>Actividad para escuelas</h3><p>Guía de debate sobre justicia transicional.</p></article>
+        <article class="card"><h3>Documental recomendado</h3><p><a href="https://cine.ar/play/61307" target="_blank" rel="noopener">“El juicio” (2023)</a></p></article>
+      </div>
+    </section>
+
+    <!-- Fuentes externas -->
+    <section id="recursos">
+      <h2>Fuentes externas por evento</h2>
+      <!-- Example accordion item -->
+      <details>
+        <summary><strong>24 / 03 / 1976 – Dictadura Militar</strong></summary>
+        <ul>
+          <li><a href="https://youtu.be/IQ39hbxYDdc?si=3fJ9iRGnxLrwksrI" target="_blank" rel="noopener">Video — Comunicado Nº 1 (YouTube)</a></li>
+        </ul>
+      </details>
+      <!-- (Sección recortada para brevedad en este ejemplo, pero en tu código completo incluye todos los detalles como antes) -->
+      <!-- Pega aquí todos los <details>…</details> de los eventos -->
+    </section>
+
+    <!-- contacto -->
+    <section id="contacto">
+      <h2>Contacto / Aportes</h2>
+      <div class="card"><p>¿Querés sumar tu testimonio o material? Escribinos a <a href="mailto:memoria@justicia.ar">memoria@justicia.ar</a> o completá <a href="https://forms.gle/xxxxxxxx" target="_blank" rel="noopener">este formulario</a>.</p></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Sitio construido para honrar la Memoria, la Verdad y la Justicia.<br>© 2025 – 40 años del Juicio a las Juntas.</p>
+  </footer>
+
+  <script>
+    // Menú móvil simple
+    const toggleBtn=document.querySelector('.nav-toggle');
+    const navLinks=document.getElementById('navLinks');
+    toggleBtn.addEventListener('click',()=>{navLinks.classList.toggle('open');});
+    navLinks.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>navLinks.classList.remove('open')));
+  </script>
+</body>
+</html>
