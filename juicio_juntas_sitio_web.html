@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Juicio a las Juntas | 40 Años</title>
+  <meta name="description" content="Sitio conmemorativo a 40 años del Juicio a las Juntas Militares en Argentina. Cronología interactiva, testimonios y recursos educativos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/1/1b/Escudo_de_la_Nacion_Argentina.svg" type="image/svg+xml">
+  <style>
+    :root {
+      --clr-primary: #0e2342;
+      --clr-secondary: #005cc8;
+      --clr-accent: #e63946;
+      --clr-light: #f9f9f9;
+      --clr-dark: #111;
+      --max-width: 1200px;
+      --radius: 6px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Roboto', Arial, Helvetica, sans-serif; line-height: 1.6; background: var(--clr-light); color: #333; }
+    h1, h2, h3 { font-family: 'Merriweather', serif; }
+    a { color: var(--clr-secondary); text-decoration: none; }
+    a:hover { color: var(--clr-accent); }
+    header { background: var(--clr-primary); color: #fff; text-align: center; padding: 4rem 1rem 6rem; position: relative; }
+    header::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 40px; background: linear-gradient(180deg, rgba(14, 35, 66, 0) 0%, var(--clr-light) 100%); }
+    .hero-title { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 0.5rem; }
+    .hero-sub { font-size: clamp(1rem, 2.5vw, 1.3rem); }
+    nav { background: var(--clr-dark); position: sticky; top: 0; z-index: 999; }
+    .nav-container { max-width: var(--max-width); margin: auto; display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 1rem; }
+    .nav-links { display: flex; gap: 1.2rem; }
+    .nav-links a { color: #fff; font-weight: bold; }
+    .nav-toggle { display: none; font-size: 1.8rem; color: #fff; background: none; border: none; }
+    section { padding: 4rem 1rem; max-width: var(--max-width); margin: auto; }
+    .timeline { position: relative; margin-top: 2rem; }
+    .timeline::before { content: ''; position: absolute; left: 20px; top: 0; width: 4px; height: 100%; background: var(--clr-secondary); }
+    .timeline-item { position: relative; margin-left: 60px; margin-bottom: 2rem; }
+    .timeline-item::before { content: ''; position: absolute; left: -44px; top: 0; width: 16px; height: 16px; background: var(--clr-accent); border-radius: 50%; }
+    .card { background: #fff; padding: 1.5rem; border-radius: var(--radius); box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); }
+    .grid { display: grid; gap: 1.5rem; }
+    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    blockquote { font-style: italic; border-left: 4px solid var(--clr-accent); padding-left: 1rem; }
+    footer { background: var(--clr-dark); color: #ccc; text-align: center; padding: 2rem 1rem; }
+    @media (max-width: 768px) {
+      .nav-links { position: absolute; top: 100%; left: 0; background: var(--clr-dark); width: 100%; flex-direction: column; max-height: 0; overflow: hidden; transition: max-height .3s ease; }
+      .nav-links.open { max-height: 300px; }
+      .nav-toggle { display: block; }
+    }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="hero-title">Juicio a las Juntas</h1>
+    <p class="hero-sub">40° Aniversario • Memoria, Verdad y Justicia</p>
+  </header>
+
+  <nav aria-label="Menú principal">
+    <div class="nav-container">
+      <button class="nav-toggle" aria-label="Abrir / Cerrar menú">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#contexto">Contexto</a>
+        <a href="#linea-tiempo">Cronología</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#materiales">Recursos</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="contexto">
+      <h2>Contexto Histórico</h2>
+      <div class="card">
+        <p>El <strong>Juicio a las Juntas</strong> comenzó el <time datetime="1985-04-22">22 de abril de 1985</time> y marcó un precedente mundial al juzgar en tribunales civiles a los máximos responsables de la última dictadura cívico-militar en Argentina (1976‑1983). Con más de <strong>800 testimonios</strong> y <strong>530 horas de audiencias</strong>, este proceso reivindicó la búsqueda de Memoria, Verdad y Justicia.</p>
+      </div>
+    </section>
+
+    <section id="linea-tiempo">
+      <h2>Cronología Destacada</h2>
+      <div class="timeline">
+        <article class="timeline-item">
+          <h3>22 • Abril • 1985</h3>
+          <p>Comienzo de las audiencias públicas en el Palacio de Justicia.</p>
+        </article>
+        <article class="timeline-item">
+          <h3>Septiembre 1985</h3>
+          <p>Alegato del fiscal Julio Strassera culmina con el histórico “<em>Nunca Más</em>”.</p>
+        </article>
+        <article class="timeline-item">
+          <h3>9 • Diciembre • 1985</h3>
+          <p>Sentencia: condenas para Jorge Rafael Videla y Emilio Eduardo Massera, entre otros.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="testimonios">
+      <h2>Testimonios</h2>
+      <div class="grid grid-2">
+        <figure class="card">
+          <blockquote>“Señores jueces: ¡Nunca más!”</blockquote>
+          <figcaption>— Julio César Strassera, fiscal (1985)</figcaption>
+        </figure>
+        <figure class="card">
+          <blockquote>“Declaré para que mi voz representara a quienes ya no estaban.”</blockquote>
+          <figcaption>— Sobreviviente ex‑detenida</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="materiales">
+      <h2>Recursos Educativos y Descargas</h2>
+      <div class="grid grid-2">
+        <article class="card">
+          <h3>Sentencia Completa (PDF)</h3>
+          <p><a href="https://www.cij.gov.ar/nota-12548-Sentencia-del-Juicio-a-las-Juntas.html" target="_blank" rel="noopener">Descargar documento</a></p>
+        </article>
+        <article class="card">
+          <h3>Glosario de Términos</h3>
+          <ul>
+            <li>CONADEP</li>
+            <li>Punto Final</li>
+            <li>Obediencia Debida</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Actividad Didáctica</h3>
+          <p>Guía de debate para escuelas secundarias.</p>
+        </article>
+        <article class="card">
+          <h3>Documental Recomendado</h3>
+          <p><a href="https://cine.ar/play/61307" target="_blank" rel="noopener">“El juicio” (2023)</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto / Aportes</h2>
+      <div class="card">
+        <p>¿Querés sumar tu testimonio, material o consulta? Escribinos a <a href="mailto:memoria@justicia.ar">memoria@justicia.ar</a> o completá <a href="https://forms.gle/xxxxxxxx" target="_blank" rel="noopener">este formulario</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Sitio creado para honrar la Memoria, la Verdad y la Justicia.<br>© 2025 • 40 años del Juicio a las Juntas.</p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.querySelector('.nav-toggle');
+    const navLinks = document.getElementById('navLinks');
+
+    toggleBtn.addEvent
